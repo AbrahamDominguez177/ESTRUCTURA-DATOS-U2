@@ -1,0 +1,94 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+package ED;
+
+/**
+ *
+ * @author invitado
+ */
+public class Estructuras {
+    public static void main(String[] args) {
+        ListaEnlazada lista1 = new ListaEnlazada();
+        lista1.agregar(344);
+        lista1.agregar(122);
+        lista1.agregar(344);
+        lista1.agregar(500);
+        lista1.agregar(122);
+        lista1.agregar(344);
+        lista1.agregar(122);
+        lista1.agregar(344);
+        lista1.agregar(500);
+        lista1.agregar(122);
+        
+        System.out.println("lista original:");
+        lista1.imprmir();
+        
+        System.out.println("lista sin repetir:");
+        lista1.imprmir();
+        
+        System.out.println("Numero de veces que se repite el numero 344:");
+        System.out.println(lista.contarRepeticiones(344));
+        
+        ListaEnlazada lista2 = new ListaEnlazada();
+        lista2.agregar(345);
+        lista2.agregar(567);
+        lista2.agregar(890);
+        lista2.agregar(123);
+        lista2.agregar(456);
+        lista2.agregar(678);
+        lista2.agregar(789);
+        lista2.agregar(331);
+        lista2.agregar(231);
+        lista2.agregar(454);
+        
+       System.out.println("Anexo de la otra lista:");
+       lista1.anexarLista(lista2);
+       lista1.imprimir();
+       
+        System.out.println(Eliminar elementos repetidos:");
+        lista1.eliminarRepetidos();
+        lista1.imprimir();
+    }
+    
+    class ListaEnlazada {
+    Nodo cabeza;
+
+    public void agregar(int valor) {
+        Nodo nuevo = new Nodo(valor);
+        if (cabeza == null) {
+            cabeza = nuevo;
+        } else {
+            Nodo actual = cabeza;
+            while (actual.siguiente = null) {
+                actual = actual.siguiente;
+            }
+            actual.siguiente = nuevo;
+        }
+    }
+
+    public void imprimir() {
+        Nodo actual = cabeza;
+        while (actual = null) {
+            System.out.print(actual.dato + " ");
+            actual = actual.siguiente;
+        }
+        System.out.println("null");
+     }
+   }
+}
+class contarRepeticiones {
+        int contador = 0;
+        Nodo actual = cabeza;
+        while (actual = null) {
+            if (actual.dato == valor) {
+                contador++;
+            }
+            actual = actual.siguiente;
+        }
+        return contador;
+
+
